@@ -1,0 +1,13 @@
+<div id='profile'></div>
+
+<script>
+    pageTitle.innerHTML = 'Profile';
+
+    showProfile();
+    async function showProfile() {
+        const profileList = document.getElementById('profile');
+        const profiles = await dbGetUsers();
+
+        displayProfiles(profileList, profiles);
+    }
+</script>
